@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.mins.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <img src="/assets/images/logo_rg.png" alt="">
+
+            <div class="nav-links">
+                <i class="fa fa-times" onclick="closeMenu()"></i>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+    </section>
+    <main>
+        <section id="orders">
+            <h2>Recent Orders</h2>
+            <!-- Sample order items -->
+            <div class="order-item">
+                <p><strong>Order ID:</strong> #12345</p>
+                <p><strong>Items:</strong> Product 1, Product 2</p>
+                <p><strong>Total:</strong> $50.00</p>
+            </div>
+            <div class="order-item">
+                <p><strong>Order ID:</strong> #54321</p>
+                <p><strong>Items:</strong> Product 3, Product 4</p>
+                <p><strong>Total:</strong> $70.00</p>
+            </div>
+        </section>
+        <section id="profile">
+            <h2>Profile Information</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> john@example.com</p>
+            <p><strong>Address:</strong> 123 Main St, City, Country</p>
+            <button>Edit Profile</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your E-commerce Website</p>
+    </footer>
+    <!-- Js for toggle menu in Small screen -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function closeMenu() {
+            navLinks.style.right = "-200px"
+        }
+    </script>
+</body>
+
+</html>
