@@ -6,23 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="slideshow.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.mins.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
-    <title>Document</title>
+    <title>Studio Rahul</title>
 </head>
 
 <body>
     <section class="header">
         <nav>
-            <img src="/assets/images/logo_rg.png" alt="">
+            <img src="/assets/images/logo.png" alt="">
 
-            <div class="nav-links">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+
+            <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="closeMenu()"></i>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">My Orders</a></li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Logout</a></li>
                 </ul>
@@ -31,35 +37,72 @@
 
         </nav>
     </section>
-    <main>
-        <section id="orders">
-            <h2>Recent Orders</h2>
+
+        <section class="items-list">
             <!-- Sample order items -->
             <div class="order-item">
-                <p><strong>Order ID:</strong> #12345</p>
-                <p><strong>Items:</strong> Product 1, Product 2</p>
-                <p><strong>Total:</strong> $50.00</p>
+                <img src="/assets/images/iron.png" alt="img">
+                <p><strong>Electronics</strong></p>
             </div>
+            <br>
             <div class="order-item">
-                <p><strong>Order ID:</strong> #54321</p>
-                <p><strong>Items:</strong> Product 3, Product 4</p>
-                <p><strong>Total:</strong> $70.00</p>
+                <img src="/assets/images/woman.png" alt="img">
+                <p><strong>Fashion</strong></p>
             </div>
+            <br>
+            <div class="order-item">
+                <img src="/assets/images/home.png" alt="img">
+                <p><strong>Home & Furniture</strong></p>
+            </div>
+            <br>
+            <div class="order-item">
+                <img src="/assets/images/toys.png" alt="img">
+                <p><strong>Childern Items & Toys</strong></p>
+            </div>
+            <br>
+            <div class="order-item">
+                <img src="/assets/images/phone.png" alt="img">
+                <p><strong>Mobiles</strong></p>
+            </div>
+            <br>
+            <div class="order-item">
+                <img src="/assets/images/grocery.png" alt="img">
+                <p><strong>Groceries</strong></p>
+            </div>
+            <br>
+            <div class="order-item">
+                <img src="/assets/images/travel.png" alt="img">
+                <p><strong>Travel</strong></p>
+            </div>
+            <br>
+            <div class="order-item">
+                <img src="/assets/images/beauty.png" alt="img">
+                <p><strong>Beauty Products</strong></p>
+            </div>
+            <br>
+
         </section>
-        <section id="profile">
-            <h2>Profile Information</h2>
-            <p><strong>Name:</strong> John Doe</p>
-            <p><strong>Email:</strong> john@example.com</p>
-            <p><strong>Address:</strong> 123 Main St, City, Country</p>
-            <button>Edit Profile</button>
+
+        <section class="slidebox">
+    
+                <div class="slide fade">
+                    <img src="assets/images/1.png" alt="Slide 1">
+                </div>
+                <div class="slide fade">
+                    <img src="assets/images/2.png" alt="Slide 2">
+                </div>
+                <div class="slide fade">
+                    <img src="assets/images/3.png" alt="Slide 3">
+                </div>
+                <div class="slide fade">
+                    <img src="assets/images/4.png" alt="Slide 4">
+                </div>
+                <script src="slideshow.js"></script>
+
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your E-commerce Website</p>
-    </footer>
     <!-- Js for toggle menu in Small screen -->
     <script>
-        var navLinks = document.getElementById("navLinks");
+        var navLinks = document.querySelector(".nav-links");
 
         function showMenu() {
             navLinks.style.right = "0";
